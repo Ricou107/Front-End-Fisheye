@@ -6,6 +6,46 @@
     background-color: #FAFAFA;
     height: 300px;
     margin: 0 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px 0 30px;
+}
+
+.photograph-header h2 {
+    font-style: normal;
+font-weight: 400;
+font-size: 64px;
+line-height: 83px;
+color: #D3573C;
+margin: 0;
+}
+
+.photograph-header h3 {
+    font-weight: 400;
+font-size: 24px;
+line-height: 31px;
+margin: 0;
+color: #901C1C;
+}
+
+.photograph-header h4 { 
+    font-weight: 400;
+font-size: 18px;
+line-height: 23px;
+margin: 0;
+padding-top: 20px;
+
+color: #525252;
+}
+
+.photograph-header img {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+
 }
 
 .contact_button {
@@ -73,4 +113,57 @@ form input {
     height: 68px;
     border: none;
     border-radius: 5px;
+}
+
+.photos {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 70px;
+    margin: 50px 100px;
+}
+
+.photos .bottom-banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+ }
+
+.photos img { 
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 5%;
+}
+
+.photos video { 
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 5%;
+}
+
+.priceDiv {
+    background-color: #DB8876;
+    position: fixed;
+    bottom: 0;
+    right: 20px;
+font-size: 24px;
+font-weight: 500;
+line-height: 31px;
+letter-spacing: 0em;
+text-align: center;
+border-radius: 10%;
+height: 40px;
+margin: auto;
+
+}
+
+#contact-modal {
+    width: 400px;
+    height: 300px;
+    position: absolute;
+    left: 50%;
+    top: 50%; 
+    margin-left: -150px;
+    margin-top: -150px;
 }
