@@ -34,25 +34,25 @@
 				<form>
 					<div>
 						<label for="first">Prénom</label>
-						<input type="text" name="first" />
+						<input type="text" name="first" required />
 					</div>
           <div>
 						<label for="last">Nom</label>
-						<input type="text" name="last"/>
+						<input type="text" name="last" required />
 					</div>
           <div>
 						<label for="email">Email</label>
-						<input type="email" name="email"/>
+						<input type="email" name="email" required />
 					</div>
           <div class="message">
 						<label for="message">Votre message</label>
-						<input type="text" name="message"/>
+						<input type="text" name="message" required />
 					</div>
           <button class="send_button" type="submit" onclick="closeModal()"> Envoyer </button>
 				</form>
 			</div>
 		</div>
-    <div id="mediaModal">
+    <div tabindex="1" id="mediaModal">
       <img src="assets/icons/previous.svg" id="previous" onclick="closeMediaModal()" />
       <article id="mediaContent"></article>
       <img src="assets/icons/cross.svg" id="close" onclick="closeMediaModal()" />

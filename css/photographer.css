@@ -137,6 +137,7 @@ form input {
     grid-template-columns: 1fr 1fr 1fr;
     gap: 70px;
     margin: 10px 100px;
+    color:#901C1C;
 }
 
 .photos .bottom-banner {

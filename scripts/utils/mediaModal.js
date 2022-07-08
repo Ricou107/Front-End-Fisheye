@@ -4,13 +4,11 @@ const next = document.getElementById("next")
 const previous = document.getElementById("previous")
 
 
-
-
 function displayMediaModal(photoUrl, mediaType, title) {
+    mediaModal.focus()
 	mediaModal.style.display = "flex";
     mainWrapper.setAttribute('aria-hidden', 'true')
     body.classList.add('no-scroll')
-    console.log(photoUrl)
     const mediaAsset = document.createElement(mediaType)
     mediaAsset.setAttribute("src", `assets/photographers/${photoUrl}`)
     mediaAsset.classList.add('media')
@@ -18,6 +16,14 @@ function displayMediaModal(photoUrl, mediaType, title) {
     const titleMedia = document.createElement('h3')
     titleMedia.innerText = title
     mediaContent.appendChild(titleMedia)
+
+    mediaModal.addEventListener("keydown", e => {
+        if (e.key == 'ArrowRight') {
+            nextMedia(photoUrl)
+        } else if (e.key == 'ArrowLeft') {
+            previousMedia(photoUrl)
+        }
+    })
 
     
     next.setAttribute("onClick", `nextMedia("${photoUrl}")`)
