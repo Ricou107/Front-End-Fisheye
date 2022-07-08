@@ -61,6 +61,19 @@ color: #525252;
     cursor: pointer;
 }
 
+.send_button  {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    padding: 11px;
+    width: 170px;
+    height: 70px;
+    border: none;
+    background-color: #901C1C;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
 .modal {
     border-radius: 5px;
     background-color: #DB8876;
@@ -110,16 +123,20 @@ form div {
 
 form input {
     width: 100%;
-    height: 68px;
+    height: 40px;
     border: none;
     border-radius: 5px;
+}
+
+.message input {
+    height: 100px;
 }
 
 .photos {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 70px;
-    margin: 50px 100px;
+    margin: 10px 100px;
 }
 
 .photos .bottom-banner {
@@ -143,6 +160,7 @@ form input {
 }
 
 .priceDiv {
+    display: flex;
     background-color: #DB8876;
     position: fixed;
     bottom: 0;
@@ -152,18 +170,121 @@ font-weight: 500;
 line-height: 31px;
 letter-spacing: 0em;
 text-align: center;
-border-radius: 10%;
+border-radius: 4px 4px 0px 0px;
 height: 40px;
 margin: auto;
-
+padding: 7px;
+align-items: center;
 }
 
-#contact-modal {
-    width: 400px;
-    height: 300px;
-    position: absolute;
+#contact_modal {
+    align-items: center;
+    background-color: rgba(0, 0, 0, .9);
+    color: white;
+    display: none;
+    height: 100%;
+    justify-content: center;
     left: 50%;
-    top: 50%; 
-    margin-left: -150px;
-    margin-top: -150px;
+    position: fixed;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    z-index: 2;
 }
+
+.no-scroll {
+    overflow: hidden;
+ }
+
+ #mediaModal {
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: black;
+    display: none;
+    height: 100%;
+    justify-content: center;
+    left: 50%;
+    position: fixed;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    z-index: 2;
+    align-items: center;
+    justify-content: space-between;
+ }
+
+ #mediaContent {
+    height: 90%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: ;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+ }
+
+ .media {
+    width: 80%;
+    height: 85%;
+    object-fit: cover;
+ }
+
+ #previous {
+    margin-left: 20px;
+ }
+
+ #next {
+    margin-right: 20px;
+ }
+
+ #close {
+    position: absolute;
+    top: 10%;
+    right: 10%;
+ }
+    .priceDiv p {
+        margin: 0;
+    }
+
+    .likesHeart {
+        display: flex;
+    }
+
+    .tri {
+        margin-left: 100px;
+        display: flex;
+    }
+
+    .links {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        margin-top: 15px;
+        position: absolute;
+        left: 200px;
+    }
+
+    .links a {
+        background-color: #901C1C;
+        color: white;
+        padding: 10px;
+    }
+
+    .links a:not(:first-child) {
+        display: none;
+        border-top: 1px solid white;
+    }
+
+    .links:hover a:not(:first-child) {
+        display: block;
+        z-index: 14;
+    }
+
+    .links a:first-child {
+        border-radius: 4px 4px 0px 0px;
+    }
+
+    .links a:last-child {
+        border-radius: 0px 0px 4px 4px;
+    }

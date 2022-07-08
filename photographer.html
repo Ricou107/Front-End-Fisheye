@@ -15,7 +15,16 @@
       <div class="photograph-header">
         <button class="contact_button" onclick="displayModal()">Contactez-moi</button>
       </div>
+      <div class="tri">
+        <h2>Trier par   &nbsp;</h2>
+        <div class="links">
+          <a onclick="sortPopularity()">Popularité</a>
+          <a onclick="sortTitle()">Titre</a>
+          <a onclick="sortDate()">Date</a>
+        </div>
+      </div>
     </main>
+
     <div id="contact_modal">
 			<div class="modal">
 				<header>
@@ -24,14 +33,35 @@
         </header>
 				<form>
 					<div>
-						<label>Prénom</label>
-						<input />
+						<label for="first">Prénom</label>
+						<input type="text" name="first" />
 					</div>
-          <button class="contact_button">Envoyer</button>
+          <div>
+						<label for="last">Nom</label>
+						<input type="text" name="last"/>
+					</div>
+          <div>
+						<label for="email">Email</label>
+						<input type="email" name="email"/>
+					</div>
+          <div class="message">
+						<label for="message">Votre message</label>
+						<input type="text" name="message"/>
+					</div>
+          <button class="send_button" type="submit" onclick="closeModal()"> Envoyer </button>
 				</form>
 			</div>
 		</div>
+    <div id="mediaModal">
+      <img src="assets/icons/previous.svg" id="previous" onclick="closeMediaModal()" />
+      <article id="mediaContent"></article>
+      <img src="assets/icons/cross.svg" id="close" onclick="closeMediaModal()" />
+      <img src="assets/icons/next.svg" id="next" onclick="closeMediaModal()" />
+
+    </div>
     <script src="/scripts/utils/contactForm.js"></script>
+    <script src="/scripts/utils/mediaModal.js"></script>
+    <script src="/scripts/utils/sort.js"></script>
     <script src="scripts/pages/photographer.js"></script>
     <script src="scripts/factories/photographerPage.js"></script>
   </body>
