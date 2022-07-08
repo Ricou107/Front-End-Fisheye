@@ -233,10 +233,12 @@ align-items: center;
 
  #previous {
     margin-left: 20px;
+    width: 30px;
  }
 
  #next {
     margin-right: 20px;
+    width: 30px;
  }
 
  #close {
